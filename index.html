@@ -13,6 +13,46 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- TAMBAHAN CSS UNTUK LAYOUT ABOUT ME -->
+  <style>
+    .about-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      margin-top: 30px;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .about-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px; /* Membuat sudut foto melengkung */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Memberi bayangan halus */
+      object-fit: cover;
+    }
+
+    /* Agar responsif di HP (foto pindah ke bawah) */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .about-image {
+        margin-top: 30px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -54,15 +94,28 @@
   </div>
 </section>
 
+<!-- BAGIAN ABOUT ME YANG SUDAH DIMODIFIKASI -->
 <section id="about" class="section">
   <p class="tag">INTRODUCTION</p>
   <h2>About Me</h2>
-  <p class="section-text">
-    Saya adalah seorang pelajar yang memiliki minat
-    dalam dunia programming, khususnya web development.
-    Saya senang mempelajari teknologi baru dan membuat
-    proyek digital yang bermanfaat.
-  </p>
+  
+  <div class="about-container">
+    <!-- Bagian Teks (Kiri) -->
+    <div class="about-text">
+      <p class="section-text">
+        Saya adalah seorang pelajar yang memiliki minat
+        dalam dunia programming, khususnya web development.
+        Saya senang mempelajari teknologi baru dan membuat
+        proyek digital yang bermanfaat.
+      </p>
+    </div>
+
+    <!-- Bagian Foto (Kanan) -->
+    <div class="about-image">
+      <!-- GANTI 'foto-profil.jpg' DENGAN NAMA FILE FOTO KAMU -->
+      <img src="foto-profil.jpg" alt="Foto Profil Farhan Siregar">
+    </div>
+  </div>
 </section>
 
 <section id="skills" class="section">
